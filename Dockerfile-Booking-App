@@ -1,0 +1,28 @@
+FROM node:16-alpine
+
+RUN mkdir -p /usr/src/app
+
+WORKDIR /usr/src/app
+
+# Production use node instead of root
+# USER node
+
+COPY ./ ./
+# Remove .env file in sourecode
+RUN rm -f /usr/src/app/.env
+
+# Install node_modules
+RUN npm install
+
+# Copy env file for production-build
+COPY ./.env.production ./.env
+
+RUN cat /usr/src/app/.env
+# Build Next.JS
+RUN npm run build
+
+# Copy production env into dist directory for start production-container
+COPY ./.env.production ./dist/apps/customer-web/.env
+
+EXPOSE 3000
+CMD [ "npm", "start" ]
