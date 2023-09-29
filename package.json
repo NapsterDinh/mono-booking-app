@@ -1,5 +1,5 @@
 {
-  "name": "@tsu-org/mono-booking-app",
+  "name": "mono-boking-app",
   "version": "0.0.1",
   "license": "MIT",
   "author": "napsterDinh",
@@ -98,10 +98,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NapsterDinh/mono-boking-app"
+    "url": "https://github.com/NapsterDinh/mono-booking-app.git"
   },
   "publishConfig": {
     "access": "public",
-    "@napsterdinh:registry": "https://npm.pkg.github.com"
+    "@napsterDinh:registry": "https://npm.pkg.github.com"
   }
 }
