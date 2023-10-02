@@ -1,4 +1,4 @@
-import type { vars } from '@tsu-org/ui/css/vars.css';
+import { vars } from '../css/vars.css';
 import type { Breakpoints, MediaQueries, ZIndices } from './types';
 
 export interface MainTheme {

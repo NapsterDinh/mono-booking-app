@@ -1,6 +1,6 @@
 import { css, Theme } from '@emotion/react';
 import styled from '@emotion/styled';
-import { tokens } from '@tsu-org/ui';
+import { tokens } from '@tsu-org/ui-kit/tokens/index';
 import { layout, space, system, typography } from 'styled-system';
 import getThemeValue from '../../util/getThemeValue';
 import type { TextProps } from './types';

@@ -1,5 +1,5 @@
-import type { AtomBoxProps } from '@tsu-org/ui';
-import { AtomBox } from '@tsu-org/ui';
+import type { AtomBoxProps } from '@tsu-org/ui-kit/components/Box/types';
+import { AtomBox } from '@tsu-org/ui-kit/components/Box';
 import { forwardRef, Ref } from 'react';
 
 export const Row = forwardRef(

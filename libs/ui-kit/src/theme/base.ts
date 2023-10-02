@@ -1,4 +1,6 @@
-import { breakpoints, mediaQueries, vars } from '@tsu-org/ui';
+import { breakpoints } from '../css/breakpoints';
+import { mediaQueries } from '../css/breakpoints';
+import { vars } from '../css/vars.css';
 
 const themeBreakpoints: string[] = [];
 

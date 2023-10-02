@@ -40,7 +40,7 @@
       "files": ["*.js", "*.jsx"],
       "extends": ["plugin:@nx/javascript"],
       "rules": {
-        "@nx/enforce-module-boundaries": "off"
+        "@nx/enforce-module-boundaries": "warning"
       }
     }
   ]

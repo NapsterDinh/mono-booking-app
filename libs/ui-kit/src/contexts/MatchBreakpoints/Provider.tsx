@@ -1,4 +1,4 @@
-import { breakpoints } from '@tsu-org/ui';
+import { breakpoints } from '../../css/breakpoints';
 import React, { createContext, useState } from 'react';
 import { useIsomorphicEffect } from '../../hooks';
 

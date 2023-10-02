@@ -18,34 +18,31 @@ type Props = Atoms &
     className?: ClassValue;
   };
 
-export const AtomBox = React.forwardRef<HTMLElement, Props>(
-  ({ as = 'div', asChild, className, ...props }: Props, ref) => {
-    const atomProps: Record<string, unknown> = {};
-    const nativeProps: Record<string, unknown> = {};
+const AtomBox = React.forwardRef<HTMLElement, Props>(({ as = 'div', asChild, className, ...props }: Props, ref) => {
+  const atomProps: Record<string, unknown> = {};
+  const nativeProps: Record<string, unknown> = {};
 
-    for (const key in props) {
-      if (sprinkles.properties.has(key as keyof Omit<Atoms, 'reset'>)) {
-        atomProps[key] = props[key as keyof typeof props];
-      } else {
-        nativeProps[key] = props[key as keyof typeof props];
-      }
+  for (const key in props) {
+    if (sprinkles.properties.has(key as keyof Omit<Atoms, 'reset'>)) {
+      atomProps[key] = props[key as keyof typeof props];
+    } else {
+      nativeProps[key] = props[key as keyof typeof props];
     }
+  }
 
-    const atomicClasses = atoms({
-      reset: typeof as === 'string' ? (as as Atoms['reset']) : 'div',
-      ...atomProps,
-    });
+  const atomicClasses = atoms({
+    reset: typeof as === 'string' ? (as as Atoms['reset']) : 'div',
+    ...atomProps,
+  });
 
-    const Comp = asChild ? Slot : as;
+  const Comp = asChild ? Slot : as;
 
-    return React.createElement(Comp, {
-      className: clsx(atomicClasses, className),
-      ...nativeProps,
-      ref,
-    });
-  },
-);
-
-export type AtomBoxProps = Parameters<typeof AtomBox>[0];
+  return React.createElement(Comp, {
+    className: clsx(atomicClasses, className),
+    ...nativeProps,
+    ref,
+  });
+});
+export default AtomBox;
 
 AtomBox.displayName = 'AtomBox';

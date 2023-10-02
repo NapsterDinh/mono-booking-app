@@ -1,4 +1,5 @@
-import { AtomBox, AtomBoxProps } from '@tsu-org/ui';
+import { AtomBox } from '@tsu-org/ui-kit/components/Box';
+import { AtomBoxProps } from '../Box/types';
 import { forwardRef, Ref } from 'react';
 
 export const Column = forwardRef((props: AtomBoxProps, ref: Ref<any>) => (
