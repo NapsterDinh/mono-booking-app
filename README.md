@@ -20,3 +20,5 @@
 }
 }
 }
+
+Chua config docker, pm2, ci/cd

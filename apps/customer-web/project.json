@@ -9,7 +9,15 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/customer-web"
+        "outputPath": "dist/apps/customer-web",
+        "assets": [
+          {
+            "input": "static",
+            "glob": "**/*",
+            "output": "static"
+          }
+        ],
+        "root": "apps/customer-web"
       },
       "configurations": {
         "development": {
